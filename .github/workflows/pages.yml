@@ -50,6 +50,33 @@ jobs:
         
       - name: Copy HIP logo
         run: cp human-identity-protocol.png _site/
+      
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick curl
+        
+      - name: Create favicon from robot emoji
+        run: |
+          # Download robot emoji
+          curl -s "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/robot_1f916.png" -o robot_emoji.png
+
+          # Resize to common favicon sizes and create a favicon.ico file
+          convert robot_emoji.png -resize 16x16 favicon-16x16.png
+          convert robot_emoji.png -resize 32x32 favicon-32x32.png
+          convert robot_emoji.png -resize 48x48 favicon-48x48.png
+          convert favicon-16x16.png favicon-32x32.png favicon-48x48.png favicon.ico
+
+          # Move files to target directory
+          mv favicon.ico _site/
+          mv favicon-16x16.png _site/
+          mv favicon-32x32.png _site/
+
+          # Clean up
+          rm robot_emoji.png
+          
+      - name: Add favicon to HTML files
+        run: |
+          # Insert favicon link tags into the HTML file's head section
+          sed -i 's/<head>/<head>\n<link rel="icon" type="image\/x-icon" href="favicon.ico">\n<link rel="icon" type="image\/png" sizes="16x16" href="favicon-16x16.png">\n<link rel="icon" type="image\/png" sizes="32x32" href="favicon-32x32.png">/' _site/index.html
         
       - name: Create README for site
         run: |
