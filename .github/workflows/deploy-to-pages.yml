@@ -53,3 +53,4 @@ jobs:
       with:
         folder: docs
         branch: gh-pages
+        clean: true # Automatically remove deleted files from the deploy branch
