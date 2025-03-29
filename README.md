@@ -1,5 +1,7 @@
 # Human Identity Protocol (HIP)
 
+![Human Identity Protocol Logo](human-identity-protocol.png)
+
 This repository contains the source for the Human Identity Protocol draft RFC. 
 
 ## Abstract
@@ -26,6 +28,6 @@ the GitHub Actions workflow will:
 
 1. Generate the HTML and text versions of the RFC
 2. Deploy them to the gh-pages branch
-3. Make them available at: https://[username].github.io/[repository-name]/
+3. Make them available at: https://human-identity.github.io/HIP/
 
-You can view the published RFC at the above URL once the workflow has completed.
+You can view the published RFC at [human-identity.github.io/HIP](https://human-identity.github.io/HIP/).
