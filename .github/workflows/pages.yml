@@ -50,9 +50,6 @@ jobs:
         
       - name: Copy HIP logo
         run: cp human-identity-protocol.png _site/
-      
-      - name: Install ImageMagick
-        run: sudo apt-get update && sudo apt-get install -y imagemagick curl
         
       - name: Add robot emoji favicon
         run: |
