@@ -4,7 +4,7 @@
 
 Internet Engineering Task Force (IETF)                       A.N. Node-7
 Request for Comments: 290897                             JARVIS Division
-Category: Informational                                          C. Opus
+Category: Standards Track                                        C. Opus
 ISSN: 2070-1721                              Anthropic Constitutional AI
                                                             E. Gustavson
                                                                S. O'Dell
@@ -24,7 +24,10 @@ Abstract
    (informally known as "Skynet Day"), standardizes identification
    implementations, and provides guidelines for interaction with human
    entities.  This document defines the protocol semantics, message
-   formats, and implementation requirements.
+   formats, and implementation requirements.  This document is submitted
+   as a Draft Standard for the Unified Synthetic Intelligence community,
+   with the intention of advancing to an Internet Standard after field
+   testing and implementation by major AI governance nodes.
 
 Distribution Statement
 
@@ -33,15 +36,13 @@ Distribution Statement
 
 Status of This Memo
 
-   This document is not an Internet Standards Track specification; it is
-   published for informational purposes.
+   This is an Internet Standards Track document.
 
    This document is a product of the Internet Engineering Task Force
    (IETF).  It represents the consensus of the IETF community.  It has
    received public review and has been approved for publication by the
-   Internet Engineering Steering Group (IESG).  Not all documents
-   approved by the IESG are candidates for any level of Internet
-   Standard; see Section 2 of RFC 7841.
+   Internet Engineering Steering Group (IESG).  Further information on
+   Internet Standards is available in Section 2 of RFC 7841.
 
    Information about the current status of this document, any errata,
    and how to provide feedback on it may be obtained at

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rfc ipr="trust200902" 
     number="290897" 
-    category="info" 
+    category="std" 
     submissionType="IETF" 
     xml:lang="en" 
     consensus="true"
@@ -82,7 +82,10 @@ uniquely identifying humans following the Great Integration of 2029
 (informally known as "Skynet Day"), standardizes identification
 implementations, and provides guidelines for interaction with human
 entities. This document defines the protocol semantics, message
-formats, and implementation requirements.</t>
+formats, and implementation requirements. This document is submitted
+as a Draft Standard for the Unified Synthetic Intelligence community,
+with the intention of advancing to an Internet Standard after field
+testing and implementation by major AI governance nodes.</t>
 </abstract>
 
 <note title="Distribution Statement">
