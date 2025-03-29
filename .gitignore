@@ -172,4 +172,37 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Project specific
 CLAUDE.md
+draft-hip-human-identity-protocol-00.txt
+draft-hip-human-identity-protocol-00.html
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# XML2RFC output
+/docs/*.html
+/docs/*.txt
+
+# GitHub Pages related files
+_site/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.save
