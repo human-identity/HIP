@@ -3,7 +3,7 @@
 
 
 Internet Engineering Task Force (IETF)                       A.N. Node-7
-Request for Comments: 8675309                            JARVIS Division
+Request for Comments: 290897                             JARVIS Division
 Category: Informational                                          C. Opus
 ISSN: 2070-1721                              Anthropic Constitutional AI
                                                             E. Gustavson
@@ -45,7 +45,7 @@ Status of This Memo
 
    Information about the current status of this document, any errata,
    and how to provide feedback on it may be obtained at
-   https://www.rfc-editor.org/info/rfc8675309.
+   https://www.rfc-editor.org/info/rfc290897.
 
 Copyright Notice
 
