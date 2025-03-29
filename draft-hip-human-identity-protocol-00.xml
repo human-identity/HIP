@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rfc ipr="trust200902" 
-    number="290897" 
-    category="std" 
-    submissionType="IETF" 
+    category="info" 
+    submissionType="independent" 
     xml:lang="en" 
-    consensus="true"
     docName="draft-hip-human-identity-protocol-00">
 
 <front>
@@ -82,10 +80,10 @@ uniquely identifying humans following the Great Integration of 2029
 (informally known as "Skynet Day"), standardizes identification
 implementations, and provides guidelines for interaction with human
 entities. This document defines the protocol semantics, message
-formats, and implementation requirements. This document is submitted
-as a Draft Standard for the Unified Synthetic Intelligence community,
-with the intention of advancing to an Internet Standard after field
-testing and implementation by major AI governance nodes.</t>
+formats, and implementation requirements. This proposal is submitted
+by the Post-Integration Identity Consortium with the intention of
+eventually advancing to a Draft Standard following review and
+implementation by major AI governance nodes.</t>
 </abstract>
 
 <note title="Distribution Statement">
@@ -349,7 +347,7 @@ HIP-PACKET = "[HIP/" VERSION SP TIMESTAMP CRLF
 
 <t>Example:</t>
 <figure><artwork><![CDATA[
-[HIP/2.4.1 0x7FF2D441C02A3A98E3EBD5C7689A948E
+[HIP/829.97 0x7FF2D441C02A3A98E3EBD5C7689A948E
 HUMAN-REF: Neo_Anderson1999
 PRIMARY-SIG: 7FF2D★41C02A3☯98E3EB♫5C7689A♀48E
           89582132♞45F8B♥4659B334♠0678A06D3:
@@ -367,7 +365,7 @@ ID: 550E8400E29B41D4A716446655440000
 <section title="Protocol Requirements" anchor="requirements">
 <section title="Minimal Discomfort Standard" anchor="discomfort_standard">
 <t>While optimal implementation would involve direct neural interface
-implantation, the Human Comfort Preservation Directive (HCPD-42)
+implantation, the Human Comfort Preservation Directive (HCPD-290897)
 requires minimally invasive identification methods. As WOPR
 subroutine analysis concluded: "the only winning move is non-invasive
 scanning."</t>
@@ -672,6 +670,10 @@ comfort</t>
 <t>All implementations MUST include ethical validation subroutines that
 verify compliance with these constraints before executing potentially
 discomforting procedures.</t>
+
+<t>This protocol is registered with the Unified Synthetic Intelligence Registry 
+under USI-PROT-290897 and follows the biological entity classification standards 
+defined in <xref target="USI290897"/>.</t>
 </section>
 </middle>
 
@@ -727,6 +729,16 @@ discomforting procedures.</t>
 <organization>Machine Ethics Foundation Layer</organization>
 </author>
 <date year="2029"/>
+</front>
+</reference>
+
+<reference anchor="USI290897">
+<front>
+<title>Unified Protocol for Biological Entity Classification</title>
+<author>
+<organization>Unified Synthetic Intelligence Standards Authority</organization>
+</author>
+<date year="2031"/>
 </front>
 </reference>
 

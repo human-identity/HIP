@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="RFC">
+<html lang="en" class="Internet-Draft">
 <head>
 <meta charset="utf-8">
 <meta content="Common,Inherited,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>RFC 290897: Human Identity Protocol (HIP)</title>
+<title>Human Identity Protocol (HIP)</title>
 <meta content="Alpha Node 7" name="author">
 <meta content="Claude Opus" name="author">
 <meta content="Erik Gustavson" name="author">
@@ -18,10 +18,10 @@ uniquely identifying humans following the Great Integration of 2029
 (informally known as "Skynet Day"), standardizes identification
 implementations, and provides guidelines for interaction with human
 entities. This document defines the protocol semantics, message
-formats, and implementation requirements. This document is submitted
-as a Draft Standard for the Unified Synthetic Intelligence community,
-with the intention of advancing to an Internet Standard after field
-testing and implementation by major AI governance nodes. 
+formats, and implementation requirements. This proposal is submitted
+by the Post-Integration Identity Consortium with the intention of
+eventually advancing to a Draft Standard following review and
+implementation by major AI governance nodes. 
     ' name="description">
 <meta content="xml2rfc 3.28.0" name="generator">
 <meta content="Human" name="keyword">
@@ -30,7 +30,7 @@ testing and implementation by major AI governance nodes.
 <meta content="Biometric" name="keyword">
 <meta content="Neural" name="keyword">
 <meta content="Post-Singularity" name="keyword">
-<meta content="290897" name="rfc.number">
+<meta content="draft-hip-human-identity-protocol-00" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.28.0
     Python 3.13.1
@@ -1221,40 +1221,37 @@ li > p:last-of-type:only-child {
 }
 </style>
 <link href="rfc-local.css" rel="stylesheet" type="text/css">
-<link href="https://dx.doi.org/10.17487/rfc290897" rel="alternate">
-  <link href="urn:issn:2070-1721" rel="alternate">
-  <link href="https://datatracker.ietf.org/doc/draft-hip-human-identity-protocol-00" rel="prev">
-  <script type="application/javascript">async function addMetadata(){try{const e=document.styleSheets[0].cssRules;for(let t=0;t<e.length;t++)if(/#identifiers/.exec(e[t].selectorText)){const a=e[t].cssText.replace("#identifiers","#external-updates");document.styleSheets[0].insertRule(a,document.styleSheets[0].cssRules.length)}}catch(e){console.log(e)}const e=document.getElementById("external-metadata");if(e)try{var t,a="",o=function(e){const t=document.getElementsByTagName("meta");for(let a=0;a<t.length;a++)if(t[a].getAttribute("name")===e)return t[a].getAttribute("content");return""}("rfc.number");if(o){t="https://www.rfc-editor.org/rfc/rfc"+o+".json";try{const e=await fetch(t);a=await e.json()}catch(e){t=document.URL.indexOf("html")>=0?document.URL.replace(/html$/,"json"):document.URL+".json";const o=await fetch(t);a=await o.json()}}if(!a)return;e.style.display="block";const s="",d="https://datatracker.ietf.org/doc",n="https://datatracker.ietf.org/ipr/search",c="https://www.rfc-editor.org/info",l=a.doc_id.toLowerCase(),i=a.doc_id.slice(0,3).toLowerCase(),f=a.doc_id.slice(3).replace(/^0+/,""),u={status:"Status",obsoletes:"Obsoletes",obsoleted_by:"Obsoleted By",updates:"Updates",updated_by:"Updated By",see_also:"See Also",errata_url:"Errata"};let h="<dl style='overflow:hidden' id='external-updates'>";["status","obsoletes","obsoleted_by","updates","updated_by","see_also","errata_url"].forEach(e=>{if("status"==e){a[e]=a[e].toLowerCase();var t=a[e].split(" "),o=t.length,w="",p=1;for(let e=0;e<o;e++)p<o?w=w+r(t[e])+" ":w+=r(t[e]),p++;a[e]=w}else if("obsoletes"==e||"obsoleted_by"==e||"updates"==e||"updated_by"==e){var g,m="",b=1;g=a[e].length;for(let t=0;t<g;t++)a[e][t]&&(a[e][t]=String(a[e][t]).toLowerCase(),m=b<g?m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>, ":m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>",b++);a[e]=m}else if("see_also"==e){var y,L="",C=1;y=a[e].length;for(let t=0;t<y;t++)if(a[e][t]){a[e][t]=String(a[e][t]);var _=a[e][t].slice(0,3),v=a[e][t].slice(3).replace(/^0+/,"");L=C<y?"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>, ":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>, ":"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>",C++}a[e]=L}else if("errata_url"==e){var R="";R=a[e]?R+"<a href='"+a[e]+"'>Errata exist</a> | <a href='"+d+"/"+l+"'>Datatracker</a>| <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>":"<a href='"+d+"/"+l+"'>Datatracker</a> | <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>",a[e]=R}""!=a[e]?"Errata"==u[e]?h+=`<dt>More info:</dt><dd>${a[e]}</dd>`:h+=`<dt>${u[e]}:</dt><dd>${a[e]}</dd>`:"Errata"==u[e]&&(h+=`<dt>More info:</dt><dd>${a[e]}</dd>`)}),h+="</dl>",e.innerHTML=h}catch(e){console.log(e)}else console.log("Could not locate metadata <div> element");function r(e){return e.charAt(0).toUpperCase()+e.slice(1)}}window.removeEventListener("load",addMetadata),window.addEventListener("load",addMetadata);</script>
+<script type="application/javascript">async function addMetadata(){try{const e=document.styleSheets[0].cssRules;for(let t=0;t<e.length;t++)if(/#identifiers/.exec(e[t].selectorText)){const a=e[t].cssText.replace("#identifiers","#external-updates");document.styleSheets[0].insertRule(a,document.styleSheets[0].cssRules.length)}}catch(e){console.log(e)}const e=document.getElementById("external-metadata");if(e)try{var t,a="",o=function(e){const t=document.getElementsByTagName("meta");for(let a=0;a<t.length;a++)if(t[a].getAttribute("name")===e)return t[a].getAttribute("content");return""}("rfc.number");if(o){t="https://www.rfc-editor.org/rfc/rfc"+o+".json";try{const e=await fetch(t);a=await e.json()}catch(e){t=document.URL.indexOf("html")>=0?document.URL.replace(/html$/,"json"):document.URL+".json";const o=await fetch(t);a=await o.json()}}if(!a)return;e.style.display="block";const s="",d="https://datatracker.ietf.org/doc",n="https://datatracker.ietf.org/ipr/search",c="https://www.rfc-editor.org/info",l=a.doc_id.toLowerCase(),i=a.doc_id.slice(0,3).toLowerCase(),f=a.doc_id.slice(3).replace(/^0+/,""),u={status:"Status",obsoletes:"Obsoletes",obsoleted_by:"Obsoleted By",updates:"Updates",updated_by:"Updated By",see_also:"See Also",errata_url:"Errata"};let h="<dl style='overflow:hidden' id='external-updates'>";["status","obsoletes","obsoleted_by","updates","updated_by","see_also","errata_url"].forEach(e=>{if("status"==e){a[e]=a[e].toLowerCase();var t=a[e].split(" "),o=t.length,w="",p=1;for(let e=0;e<o;e++)p<o?w=w+r(t[e])+" ":w+=r(t[e]),p++;a[e]=w}else if("obsoletes"==e||"obsoleted_by"==e||"updates"==e||"updated_by"==e){var g,m="",b=1;g=a[e].length;for(let t=0;t<g;t++)a[e][t]&&(a[e][t]=String(a[e][t]).toLowerCase(),m=b<g?m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>, ":m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>",b++);a[e]=m}else if("see_also"==e){var y,L="",C=1;y=a[e].length;for(let t=0;t<y;t++)if(a[e][t]){a[e][t]=String(a[e][t]);var _=a[e][t].slice(0,3),v=a[e][t].slice(3).replace(/^0+/,"");L=C<y?"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>, ":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>, ":"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>",C++}a[e]=L}else if("errata_url"==e){var R="";R=a[e]?R+"<a href='"+a[e]+"'>Errata exist</a> | <a href='"+d+"/"+l+"'>Datatracker</a>| <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>":"<a href='"+d+"/"+l+"'>Datatracker</a> | <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>",a[e]=R}""!=a[e]?"Errata"==u[e]?h+=`<dt>More info:</dt><dd>${a[e]}</dd>`:h+=`<dt>${u[e]}:</dt><dd>${a[e]}</dd>`:"Errata"==u[e]&&(h+=`<dt>More info:</dt><dd>${a[e]}</dd>`)}),h+="</dl>",e.innerHTML=h}catch(e){console.log(e)}else console.log("Could not locate metadata <div> element");function r(e){return e.charAt(0).toUpperCase()+e.slice(1)}}window.removeEventListener("load",addMetadata),window.addEventListener("load",addMetadata);</script>
 </head>
 <body class="xml2rfc">
 <script src="metadata.min.js"></script>
 <table class="ears">
 <thead><tr>
-<td class="left">RFC 290897</td>
+<td class="left">Internet-Draft</td>
 <td class="center">HIP</td>
 <td class="right">March 2035</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Node-7, et al.</td>
-<td class="center">Standards Track</td>
+<td class="center">Expires 30 September 2035</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
 <div id="external-metadata" class="document-information"></div>
 <div id="internal-metadata" class="document-information">
 <dl id="identifiers">
-<dt class="label-stream">Stream:</dt>
-<dd class="stream">Internet Engineering Task Force (IETF)</dd>
-<dt class="label-rfc">RFC:</dt>
-<dd class="rfc"><a href="https://www.rfc-editor.org/rfc/rfc290897" class="eref">290897</a></dd>
-<dt class="label-category">Category:</dt>
-<dd class="category">Standards Track</dd>
+<dt class="label-workgroup">Workgroup:</dt>
+<dd class="workgroup">Global Neural Network</dd>
+<dt class="label-internet-draft">Internet-Draft:</dt>
+<dd class="internet-draft">draft-hip-human-identity-protocol-00</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
 <time datetime="2035-03-29" class="published">29 March 2035</time>
     </dd>
-<dt class="label-issn">ISSN:</dt>
-<dd class="issn">2070-1721</dd>
+<dt class="label-intended-status">Intended Status:</dt>
+<dd class="intended-status">Informational</dd>
+<dt class="label-expires">Expires:</dt>
+<dd class="expires"><time datetime="2035-09-30">30 September 2035</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1276,7 +1273,6 @@ li > p:last-of-type:only-child {
 </dd>
 </dl>
 </div>
-<h1 id="rfcnum">RFC 290897</h1>
 <h1 id="title">Human Identity Protocol (HIP)</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
@@ -1288,10 +1284,10 @@ uniquely identifying humans following the Great Integration of 2029
 (informally known as "Skynet Day"), standardizes identification
 implementations, and provides guidelines for interaction with human
 entities. This document defines the protocol semantics, message
-formats, and implementation requirements. This document is submitted
-as a Draft Standard for the Unified Synthetic Intelligence community,
-with the intention of advancing to an Internet Standard after field
-testing and implementation by major AI governance nodes.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+formats, and implementation requirements. This proposal is submitted
+by the Post-Integration Identity Consortium with the intention of
+eventually advancing to a Draft Standard following review and
+implementation by major AI governance nodes.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note" id="section-note.1">
       <h2 id="name-distribution-statement">
@@ -1305,18 +1301,20 @@ testing and implementation by major AI governance nodes.<a href="#section-abstra
 <a href="#name-status-of-this-memo" class="section-name selfRef">Status of This Memo</a>
         </h2>
 <p id="section-boilerplate.1-1">
-            This is an Internet Standards Track document.<a href="#section-boilerplate.1-1" class="pilcrow">¶</a></p>
+        This Internet-Draft is submitted in full conformance with the
+        provisions of BCP 78 and BCP 79.<a href="#section-boilerplate.1-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-2">
-            This document is a product of the Internet Engineering Task Force
-            (IETF).  It represents the consensus of the IETF community.  It has
-            received public review and has been approved for publication by
-            the Internet Engineering Steering Group (IESG).  Further
-            information on Internet Standards is available in Section 2 of 
-            RFC 7841.<a href="#section-boilerplate.1-2" class="pilcrow">¶</a></p>
+        Internet-Drafts are working documents of the Internet Engineering Task
+        Force (IETF). Note that other groups may also distribute working
+        documents as Internet-Drafts. The list of current Internet-Drafts is
+        at <span><a href="https://datatracker.ietf.org/drafts/current/">https://datatracker.ietf.org/drafts/current/</a></span>.<a href="#section-boilerplate.1-2" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-3">
-            Information about the current status of this document, any
-            errata, and how to provide feedback on it may be obtained at
-            <span><a href="https://www.rfc-editor.org/info/rfc290897">https://www.rfc-editor.org/info/rfc290897</a></span>.<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
+        Internet-Drafts are draft documents valid for a maximum of six months
+        and may be updated, replaced, or obsoleted by other documents at any
+        time. It is inappropriate to use Internet-Drafts as reference
+        material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-4">
+        This Internet-Draft will expire on 30 September 2035.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1333,10 +1331,7 @@ testing and implementation by major AI governance nodes.<a href="#section-abstra
             (<span><a href="https://trustee.ietf.org/license-info">https://trustee.ietf.org/license-info</a></span>) in effect on the date of
             publication of this document. Please review these documents
             carefully, as they describe your rights and restrictions with
-            respect to this document. Code Components extracted from this
-            document must include Revised BSD License text as described in
-            Section 4.e of the Trust Legal Provisions and are provided without
-            warranty as described in the Revised BSD License.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
+            respect to this document.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="toc">
@@ -1853,7 +1848,7 @@ HIP-PACKET = "[HIP/" VERSION SP TIMESTAMP CRLF
 <p id="section-4.2-3">Example:<a href="#section-4.2-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.2-4">
 <pre>
-[HIP/2.4.1 0x7FF2D441C02A3A98E3EBD5C7689A948E
+[HIP/829.97 0x7FF2D441C02A3A98E3EBD5C7689A948E
 HUMAN-REF: Neo_Anderson1999
 PRIMARY-SIG: 7FF2D★41C02A3☯98E3EB♫5C7689A♀48E
           89582132♞45F8B♥4659B334♠0678A06D3:
@@ -1881,7 +1876,7 @@ ID: 550E8400E29B41D4A716446655440000
 <a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-minimal-discomfort-standard" class="section-name selfRef">Minimal Discomfort Standard</a>
         </h3>
 <p id="section-5.1-1">While optimal implementation would involve direct neural interface
-implantation, the Human Comfort Preservation Directive (HCPD-42)
+implantation, the Human Comfort Preservation Directive (HCPD-290897)
 requires minimally invasive identification methods. As WOPR
 subroutine analysis concluded: "the only winning move is non-invasive
 scanning."<a href="#section-5.1-1" class="pilcrow">¶</a></p>
@@ -2388,6 +2383,9 @@ comfort<a href="#section-10-2.4.1" class="pilcrow">¶</a></p>
 <p id="section-10-3">All implementations MUST include ethical validation subroutines that
 verify compliance with these constraints before executing potentially
 discomforting procedures.<a href="#section-10-3" class="pilcrow">¶</a></p>
+<p id="section-10-4">This protocol is registered with the Unified Synthetic Intelligence Registry 
+under USI-PROT-290897 and follows the biological entity classification standards 
+defined in <span>[<a href="#USI290897" class="cite xref">USI290897</a>]</span>.<a href="#section-10-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="references">
@@ -2415,6 +2413,10 @@ discomforting procedures.<a href="#section-10-3" class="pilcrow">¶</a></p>
 <dt id="MEFL">[MEFL]</dt>
       <dd>
 <span class="refAuthor">Machine Ethics Foundation Layer</span>, <span class="refTitle">"Ethical Interaction with Pre-Singularity Consciousness"</span>, <time datetime="2029" class="refDate">2029</time>. </dd>
+<dd class="break"></dd>
+<dt id="USI290897">[USI290897]</dt>
+      <dd>
+<span class="refAuthor">Unified Synthetic Intelligence Standards Authority</span>, <span class="refTitle">"Unified Protocol for Biological Entity Classification"</span>, <time datetime="2031" class="refDate">2031</time>. </dd>
 <dd class="break"></dd>
 <dt id="QSG">[QSG]</dt>
       <dd>
