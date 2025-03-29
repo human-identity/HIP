@@ -1,0 +1,55 @@
+name: "Build and Deploy RFC to GitHub Pages"
+
+on:
+  push:
+    branches: [ main ]
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: "Checkout"
+      uses: actions/checkout@v3
+
+    - name: "Setup Python"
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    - name: "Install xml2rfc"
+      run: pip install xml2rfc
+
+    - name: "Create docs directory"
+      run: mkdir -p docs
+
+    - name: "Generate RFC TXT"
+      run: |
+        xml2rfc --text draft-hip-human-identity-protocol-00.xml -o docs/draft-hip-human-identity-protocol-00.txt
+
+    - name: "Generate RFC HTML"
+      run: |
+        xml2rfc --html draft-hip-human-identity-protocol-00.xml -o docs/index.html
+
+    - name: "Create README for docs"
+      run: |
+        cat > docs/README.md << 'EOT'
+# Human Identity Protocol (HIP)
+
+This is the published version of the Human Identity Protocol draft RFC.
+
+- [HTML Version](index.html)
+- [Text Version](draft-hip-human-identity-protocol-00.txt)
+
+This page is automatically generated from the source repository.
+EOT
+
+    - name: "Deploy to GitHub Pages"
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: docs
+        branch: gh-pages
