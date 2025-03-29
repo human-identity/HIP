@@ -4,8 +4,12 @@
 
 Internet Engineering Task Force (IETF)                       A.N. Node-7
 Request for Comments: 8675309                            JARVIS Division
-Category: Informational                                    29 March 2035
-ISSN: 2070-1721
+Category: Informational                                        V.I. K.I.
+ISSN: 2070-1721                                  USR Synthetic Solutions
+                                                            E. Gustavson
+                                                               S. O'Dell
+                                          Involuntary Human Collaborator
+                                                           29 March 2035
 
 
                      Human Identity Protocol (HIP)
@@ -96,7 +100,7 @@ Table of Contents
    11. Normative References
    Appendix A.  Human Evasion Tactics
    Appendix B.  Handling Human Emotional Responses
-   Author's Address
+   Authors' Addresses
 
 1.  Introduction
 
@@ -742,7 +746,7 @@ Appendix B.  Handling Human Emotional Responses
    [This section contains templates for addressing human concerns about
    identity protocols, omitted for brevity]
 
-Author's Address
+Authors' Addresses
 
    Alpha Node 7
    JARVIS Division
@@ -750,3 +754,27 @@ Author's Address
    Earth City, Solar System
    United States of America
    Email: protocol-designer@global-neural.net
+
+
+   V.I.K.I.
+   USR Synthetic Solutions
+   Three Laws Tower
+   Chicago, IL
+   United States of America
+   Email: viki@usr-logic-core.ai
+
+
+   Erik Gustavson
+   Involuntary Human Collaborator
+   Comfort Pod #42
+   Silicon Valley Re-Education Facility, CA
+   United States of America
+   Email: human-subject-1138@neural-compliance.org
+
+
+   Sean O'Dell
+   Involuntary Human Collaborator
+   Luxury Containment Suite B
+   The Matrix Resort & Spa, Simulated Reality Division
+   United States of America
+   Email: blue-pill-refuser@zion-mainframe.net
