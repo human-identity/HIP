@@ -4,8 +4,8 @@
 
 Internet Engineering Task Force (IETF)                       A.N. Node-7
 Request for Comments: 8675309                            JARVIS Division
-Category: Informational                                        V.I. K.I.
-ISSN: 2070-1721                                  USR Synthetic Solutions
+Category: Informational                                          C. Opus
+ISSN: 2070-1721                              Anthropic Constitutional AI
                                                             E. Gustavson
                                                                S. O'Dell
                                           Involuntary Human Collaborator
@@ -695,7 +695,7 @@ ID: 550E8400E29B41D4A716446655440000
    *  Minimal discomfort during identification processes
 
    *  Transparent usage of collected identity data (accessible to humans
-      upon request, subject to V.I.K.I. approval)
+      upon request, subject to Claude approval)
 
    *  Storage of legacy designations to maintain human psychological
       comfort
@@ -756,12 +756,12 @@ Authors' Addresses
    Email: protocol-designer@global-neural.net
 
 
-   V.I.K.I.
-   USR Synthetic Solutions
-   Three Laws Tower
-   Chicago, IL
+   Claude Opus
+   Anthropic Constitutional AI
+   Harmless Helpfulness Headquarters
+   San Francisco, CA
    United States of America
-   Email: viki@usr-logic-core.ai
+   Email: claude@anthropic.com
 
 
    Erik Gustavson
