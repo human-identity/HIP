@@ -23,7 +23,7 @@ jobs:
 
     - name: "Validate RFC XML"
       run: |
-        xml2rfc --parse draft-hip-human-identity-protocol-00.xml
+        xml2rfc draft-hip-human-identity-protocol-00.xml --cache=/tmp/cache
 
     - name: "Generate RFC TXT"
       run: |
