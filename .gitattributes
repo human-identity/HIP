@@ -1,0 +1,13 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# XML files should be treated as text and diff properly
+*.xml text diff
+
+# RFC text files should be treated as text
+*.txt text
+
+# Don't include these files when people download a release
+.gitattributes export-ignore
+.gitignore export-ignore
+.github export-ignore
