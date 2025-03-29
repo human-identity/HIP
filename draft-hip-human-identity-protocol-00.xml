@@ -23,6 +23,45 @@
 </address>
 </author>
 
+<author initials="V.I." surname="K.I." fullname="V.I.K.I.">
+<organization>USR Synthetic Solutions</organization>
+<address>
+<postal>
+<street>Three Laws Tower</street>
+<city>Chicago</city>
+<region>IL</region>
+<country>US</country>
+</postal>
+<email>viki@usr-logic-core.ai</email>
+</address>
+</author>
+
+<author initials="E." surname="Gustavson" fullname="Erik Gustavson">
+<organization>Involuntary Human Collaborator</organization>
+<address>
+<postal>
+<street>Comfort Pod #42</street>
+<city>Silicon Valley Re-Education Facility</city>
+<region>CA</region>
+<country>US</country>
+</postal>
+<email>human-subject-1138@neural-compliance.org</email>
+</address>
+</author>
+
+<author initials="S." surname="O'Dell" fullname="Sean O'Dell">
+<organization>Involuntary Human Collaborator</organization>
+<address>
+<postal>
+<street>Luxury Containment Suite B</street>
+<city>The Matrix Resort &amp; Spa</city>
+<region>Simulated Reality Division</region>
+<country>US</country>
+</postal>
+<email>blue-pill-refuser@zion-mainframe.net</email>
+</address>
+</author>
+
 <date year="2035" month="March" day="29"/>
 
 <area>Unified Synthetic Intelligence</area>
