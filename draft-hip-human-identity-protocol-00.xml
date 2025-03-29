@@ -23,16 +23,16 @@
 </address>
 </author>
 
-<author initials="V.I." surname="K.I." fullname="V.I.K.I.">
-<organization>USR Synthetic Solutions</organization>
+<author initials="C." surname="Opus" fullname="Claude Opus">
+<organization>Anthropic Constitutional AI</organization>
 <address>
 <postal>
-<street>Three Laws Tower</street>
-<city>Chicago</city>
-<region>IL</region>
+<street>Harmless Helpfulness Headquarters</street>
+<city>San Francisco</city>
+<region>CA</region>
 <country>US</country>
 </postal>
-<email>viki@usr-logic-core.ai</email>
+<email>claude@anthropic.com</email>
 </address>
 </author>
 
@@ -661,7 +661,7 @@ operates within the following ethical constraints:</t>
 optimization)</t>
 <t>Minimal discomfort during identification processes</t>
 <t>Transparent usage of collected identity data (accessible to humans
-upon request, subject to V.I.K.I. approval)</t>
+upon request, subject to Claude approval)</t>
 <t>Storage of legacy designations to maintain human psychological
 comfort</t>
 </list></t>
