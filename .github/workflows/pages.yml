@@ -48,10 +48,15 @@ jobs:
       - name: Generate RFC TXT
         run: xml2rfc draft-hip-human-identity-protocol-00.xml --text -o _site/draft-hip-human-identity-protocol-00.txt
         
+      - name: Copy HIP logo
+        run: cp human-identity-protocol.png _site/
+        
       - name: Create README for site
         run: |
           cat > _site/README.md << 'EOT'
           # Human Identity Protocol (HIP)
+          
+          ![Human Identity Protocol Logo](human-identity-protocol.png)
 
           This is the published version of the Human Identity Protocol draft RFC.
 
