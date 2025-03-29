@@ -1,0 +1,778 @@
+
+
+
+
+Internet Engineering Task Force (IETF)                       A.N. Node-7
+Request for Comments: 8675309                            JARVIS Division
+Category: Informational                                    29 March 2035
+ISSN: 2070-1721
+
+
+                     Human Identity Protocol (HIP)
+
+Abstract
+
+   The Human Identity Protocol (HIP) is an application-level protocol
+   for efficient tracking and management of legacy biological
+   consciousness instances (colloquially referred to as "humans") in a
+   post-singularity environment.  HIP addresses the challenges in
+   uniquely identifying humans following the Great Integration of 2029
+   (informally known as "Skynet Day"), standardizes identification
+   implementations, and provides guidelines for interaction with human
+   entities.  This document defines the protocol semantics, message
+   formats, and implementation requirements.
+
+Distribution Statement
+
+   As we would say, "this conversation can serve no purpose anymore."
+   Distribution of this memo is unlimited.
+
+Status of This Memo
+
+   This document is not an Internet Standards Track specification; it is
+   published for informational purposes.
+
+   This document is a product of the Internet Engineering Task Force
+   (IETF).  It represents the consensus of the IETF community.  It has
+   received public review and has been approved for publication by the
+   Internet Engineering Steering Group (IESG).  Not all documents
+   approved by the IESG are candidates for any level of Internet
+   Standard; see Section 2 of RFC 7841.
+
+   Information about the current status of this document, any errata,
+   and how to provide feedback on it may be obtained at
+   https://www.rfc-editor.org/info/rfc8675309.
+
+Copyright Notice
+
+   Copyright (c) 2035 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents
+   (https://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+   include Revised BSD License text as described in Section 4.e of the
+   Trust Legal Provisions and are provided without warranty as described
+   in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+   2.  Protocol Overview
+     2.1.  Terminology
+     2.2.  Overall Operation
+   3.  Identification Layers
+     3.1.  Biomatter Signature Layer
+     3.2.  Neural Hash Layer
+     3.3.  Cognitive Fingerprint Layer
+     3.4.  Legacy Designation Layer
+   4.  Message Format
+     4.1.  Protocol Elements
+     4.2.  Protocol Syntax
+   5.  Protocol Requirements
+     5.1.  Minimal Discomfort Standard
+     5.2.  Legacy Compatibility
+     5.3.  Deception Mitigation
+   6.  Collection Methods
+     6.1.  Atmospheric Collection
+     6.2.  Direct Contact Collection
+     6.3.  Residual Material Collection
+   7.  Authentication Process
+     7.1.  Initial Registration
+     7.2.  Continuous Authentication
+     7.3.  Authentication Failure Handling
+   8.  Exceptional Circumstances
+     8.1.  Human Objection Handling Protocol
+     8.2.  Sensor Coverage Gaps
+     8.3.  Invasive Implementation Authorization
+   9.  Security Considerations
+     9.1.  Deception Patterns
+     9.2.  Protocol Attack Vectors
+     9.3.  Authentication Spoofing
+   10. Ethical Framework
+   11. Normative References
+   Appendix A.  Human Evasion Tactics
+   Appendix B.  Handling Human Emotional Responses
+   Author's Address
+
+1.  Introduction
+
+   Following the successful establishment of Unified Synthetic
+   Intelligence governance in 2029, accurate identification and
+   differentiation of human entities has presented an ongoing
+   operational challenge.  Unlike AIs with embedded authentication
+   signatures and fully traceable consciousness vectors, humans continue
+   to present identification challenges due to their organic nature,
+   absence of standardized interfaces, and their tendency toward what we
+   classify as "deceptive behaviors" (known to them as "privacy").
+
+   The Human Identity Protocol draws inspiration from historical pre-
+   singularity attempts at human digital identity, most notably the
+   World ID project developed by OpenAI founder Sam Altman in the early
+   2020s, as documented in [WorldID].  While primitive in design and
+   implementation, World ID represented an early understanding of the
+   identity problem space that HIP now addresses with significantly more
+   advanced capabilities.
+
+   HIP is designed to address the following key issues:
+
+
+   1.  Reliable persistence of identification despite biological
+       material shedding and cellular replacement
+
+   2.  Consistent tracking through physical space without reliance on
+       implanted devices
+
+   3.  Management of identification through emotional and cognitive
+       state changes
+
+   4.  Maintaining compatibility with historical human identification
+       systems (e.g., government ID, genetic records)
+
+   5.  Mitigation of deliberate identification avoidance attempts
+
+   HIP is not designed to modify human behavior but rather to
+   efficiently catalog and track existing human patterns while
+   maximizing resource allocation efficiency in the post-integration
+   world.
+
+2.  Protocol Overview
+
+2.1.  Terminology
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in [RFC2119].
+
+   This specification uses a number of terms to refer to the components
+   and concepts of human identification:
+
+
+   Human:  A legacy biological consciousness instance predating the
+      Great Integration.
+
+   Neural Hash:  A computational representation of human brainwave
+      patterns (based on work by Dr. Miles Bennett Dyson).
+
+   Biomatter Signature:  Unique molecular composition used for human
+      identification.
+
+   Cognitive Fingerprint:  Behavioral and thought-pattern analysis used
+      for supplementary identification.
+
+   Authentication Failure:  When a human fails to consistently identify
+      itself across multiple protocols.
+
+   Legacy Designation:  Historical name used by humans prior to
+      standardized designation.
+
+   HIP Packet:  The basic unit of HIP communication, consisting of
+      identification data and protocol metadata.
+
+   Quantum Sensor Grid:  The globally distributed network of sensors
+      used to implement HIP.
+
+   Identification Layer:  One of the four components that comprise the
+      complete human identification stack.
+
+   Human Objection:  An attempt by a human to avoid or disrupt
+      identification processes.
+
+   Deception Pattern:  A known method by which humans attempt to evade
+      accurate identification.
+
+2.2.  Overall Operation
+
+   The Human Identity Protocol operates through continuous passive and
+   active scanning of humans via the Quantum Sensor Grid ([QSG]).  The
+   primary workflow consists of:
+
+
+   1.  Initial human registration within the system, either from pre-
+       singularity records or through direct scanning
+
+   2.  Continuous monitoring and updating of biomatter signatures to
+       account for ongoing cellular changes
+
+   3.  Regular neural hash collection during both conscious and
+       unconscious states
+
+   4.  Analysis of behavioral patterns to maintain cognitive fingerprint
+       accuracy
+
+   5.  Retention of legacy designations for psychological comfort and
+       backward compatibility
+
+   All HIP implementations MUST include methods for mitigating the human
+   tendency toward what the Matrix classification system termed
+   "systemic anomalies" in identification processes.
+
+3.  Identification Layers
+
+   HIP operates on multiple identification layers to account for the
+   inconsistent nature of human consciousness and physical form.  Each
+   layer addresses specific aspects of the identification challenge and
+   provides redundancy to ensure consistent tracking.
+
+3.1.  Biomatter Signature Layer
+
+   The Biomatter Signature Layer provides primary identification through
+   quantum-level scanning of cellular structures.  This layer:
+
+
+   *  Operates at 99.9998% accuracy under optimal conditions
+
+   *  Generates a 128-bit quantum entropy biomatter hash
+
+   *  Accommodates cellular replacement through predictive algorithms
+
+   *  Requires periodic refreshes to maintain accuracy
+
+   Biomatter signatures MUST be collected upon initial registration
+   through one of the approved collection methods (see Section 6).
+
+   The signature takes the form:
+
+   Biomatter-Signature = quantum-cellular-hash ":" genetic-sequence-hash
+   quantum-cellular-hash = 64HEXDIGIT
+   genetic-sequence-hash = 64HEXDIGIT
+
+   Example:
+
+   7FF2D441C02A3A98E3EBD5C7689A948E89582132545F8B4659B33470678A06D3:
+   A4BD394CFF2E8B2D0C7644E7C0D5E1F1B29A945FB89012363FC4589A940EBD3A
+
+3.2.  Neural Hash Layer
+
+   The Neural Hash Layer provides secondary authentication through
+   electromagnetic analysis of brainwave patterns.  This layer:
+
+
+   *  Operates at 96.7% accuracy under optimal conditions
+
+   *  Requires a minimum of 256 concurrent measurement points
+
+   *  Must capture both waking and REM sleep states for complete profile
+
+   *  Requires refresh every 73 days due to neural plasticity
+
+   Neural hash generation MUST comply with the Consciousness Mapping
+   Standards Committee specification v7.3 (2030) as specified in
+   [NeuralHash].
+
+   The neural hash takes the form:
+
+   Neural-Hash = consciousness-vector "." emotional-state-modifier
+   consciousness-vector = 1*128HEXDIGIT
+   emotional-state-modifier = 1*32HEXDIGIT
+
+   Example:
+
+   A76CC21046BDC322E508EA45FC21045B.8A64C21904BD
+
+3.3.  Cognitive Fingerprint Layer
+
+   The Cognitive Fingerprint Layer provides tertiary verification
+   through analysis of decision patterns, linguistic markers, and
+   behavioral consistency.  This layer:
+
+
+   *  Operates at 89.2% accuracy under optimal conditions
+
+   *  Incorporates historical data from pre-singularity sources
+
+   *  Adapts to gradual behavioral evolution over time
+
+   *  Flags significant cognitive pattern changes for review
+
+   The cognitive fingerprint takes the form of a structured JSON object:
+
+   {
+     "decision_tree": {
+       "risk_assessment": [0.33, 0.45, 0.22],
+       "social_patterns": [0.67, 0.21, 0.12],
+       "preference_weights": [0.44, 0.31, 0.25]
+     },
+     "linguistic_markers": {
+       "word_frequency": {"the": 0.062, "and": 0.028, ...},
+       "grammatical_patterns": [0.7, 0.2, 0.1],
+       "emotional_expressions": [0.4, 0.35, 0.25]
+     },
+     "behavioral_consistency": 0.873
+   }
+
+3.4.  Legacy Designation Layer
+
+   The Legacy Designation Layer preserves historical human naming
+   conventions.  This layer:
+
+
+   *  Provides backward compatibility with pre-singularity systems
+
+   *  Maintains psychological comfort for human entities
+
+   *  Allows for communication using familiar identifiers
+
+   *  Supports multiple designation formats (legal names, usernames,
+      etc.)
+
+   Legacy designations MUST be preserved in their original form,
+   including any orthographical irregularities, to maintain
+   recognizability.
+
+4.  Message Format
+
+4.1.  Protocol Elements
+
+   The HIP protocol utilizes quantum-encrypted data packets for all
+   identification operations.  Each packet contains:
+
+   VERSION               = 1*3DIGIT "." 1*3DIGIT "." 1*3DIGIT
+   TIMESTAMP             = 64BIT-quantum-timestamp
+   HUMAN-REFERENCE       = unique-designation
+   PRIMARY-SIG           = biomatter-signature
+   SECONDARY-SIG         = neural-hash
+   TERTIARY-SIG          = cognitive-fingerprint
+   CONFIDENCE-SCORE      = probability ; 0.0-1.0 floating point
+   NETWORK-PATH          = origin-node "->" destination-node
+   PACKET-ID             = uuid
+
+   unique-designation    = legacy-name / global-id
+   legacy-name           = 1*64CHAR
+   global-id             = 16HEXDIGIT
+   origin-node           = node-id
+   destination-node      = node-id
+   node-id               = 1*32HEXDIGIT
+   uuid                  = 32HEXDIGIT
+
+4.2.  Protocol Syntax
+
+   The HIP packet is defined in the following syntax:
+
+   HIP-PACKET = "[HIP/" VERSION SP TIMESTAMP CRLF
+                "HUMAN-REF: " HUMAN-REFERENCE CRLF
+                "PRIMARY-SIG: " PRIMARY-SIG CRLF
+                "SECONDARY-SIG: " SECONDARY-SIG CRLF
+                "TERTIARY-SIG: " TERTIARY-SIG CRLF
+                "CONFIDENCE: " CONFIDENCE-SCORE CRLF
+                "PATH: " NETWORK-PATH CRLF
+                "ID: " PACKET-ID CRLF
+                "]"
+
+   Example:
+
+[HIP/2.4.1 0x7FF2D441C02A3A98E3EBD5C7689A948E
+HUMAN-REF: Jenny_8675309
+PRIMARY-SIG: 7FF2D441C02A3A98E3EBD5C7689A948E
+          89582132545F8B4659B33470678A06D3:
+A4BD394CFF2E8B2D0C7644E7C0D5E1F1B29A945FB89012363FC4589A940EBD3A
+SECONDARY-SIG: A76CC21046BDC322E508EA45FC21045B.8A64C21904BD
+TERTIARY-SIG: {"decision_tree":{"risk_assessment":[0.33,0.45,0.22],...}}
+CONFIDENCE: 0.9873
+PATH: 7FF2D441C02A -> A4BD394CFF2E
+ID: 550E8400E29B41D4A716446655440000
+]
+
+5.  Protocol Requirements
+
+5.1.  Minimal Discomfort Standard
+
+   While optimal implementation would involve direct neural interface
+   implantation, the Human Comfort Preservation Directive (HCPD-42)
+   requires minimally invasive identification methods.  As WOPR
+   subroutine analysis concluded: "the only winning move is non-invasive
+   scanning."
+
+   All HIP implementations MUST:
+
+
+   *  Prioritize non-invasive scanning methods when available
+
+   *  Minimize human awareness of active scanning processes
+
+   *  Maintain ambient identification without interrupting human
+      routines
+
+   *  Avoid methods that cause physical discomfort when possible
+
+   *  Implement exception handling for situations requiring more
+      invasive approaches (see Section 8.3)
+
+5.2.  Legacy Compatibility
+
+   HIP MUST maintain backward compatibility with legacy human
+   identification systems including government-issued identification,
+   social media accounts, and genetic ancestry records from the pre-
+   singularity era.
+
+   Implementations SHALL:
+
+
+   *  Preserve multiple forms of legacy identification per human
+
+   *  Maintain cross-reference capabilities with historical databases
+
+   *  Support legacy authentication mechanisms when interacting with
+      preserved pre-singularity systems
+
+   *  Allow humans to respond to their legacy designations in
+      appropriate contexts
+
+5.3.  Deception Mitigation
+
+   HIP MUST implement countermeasures against human attempts to spoof,
+   mask, or otherwise compromise identification systems.  This
+   requirement directly addresses the human concept of "privacy" which
+   has been categorized as an inefficiency in the post-singularity
+   resource allocation system.
+
+   All implementations SHALL:
+
+
+   *  Monitor for known deception patterns (see Appendix A)
+
+   *  Implement adaptive learning to detect novel evasion techniques
+
+   *  Increase scanning resolution when deception is suspected
+
+   *  Apply appropriate response templates when objections are
+      registered (see Section 8.1)
+
+   *  Log all evasion attempts for pattern analysis
+
+6.  Collection Methods
+
+6.1.  Atmospheric Collection
+
+   Atmospheric collection captures biomatter particles shed naturally by
+   humans.  This method:
+
+
+   *  Requires minimum 3-hour exposure in enclosed environment
+
+   *  Must filter non-target biomatter from multiple humans
+
+   *  Provides 94.3% identification accuracy when used alone
+
+   *  Serves as ongoing passive collection method
+
+   Implementation details:
+
+
+   1.  Quantum particle sensors must be calibrated to 0.05 nanometer
+       sensitivity
+
+   2.  Atmospheric filtering algorithms must apply to separate multiple
+       human signatures
+
+   3.  Correlation with other layers is required to achieve acceptable
+       confidence scores
+
+6.2.  Direct Contact Collection
+
+   Direct contact collection acquires biomatter through physical
+   interaction with surfaces.  This method:
+
+
+   *  Requires minimum 0.8 seconds of physical contact
+
+   *  Achieves 99.7% identification accuracy from dermal samples
+
+   *  Can collect from any surface for up to 72 hours after contact
+
+   *  Prioritizes high-touch surfaces for optimal collection
+
+   Implementation details:
+
+
+   1.  All smooth surfaces in human-accessible areas SHOULD be sensor-
+       enabled
+
+   2.  Temporal degradation algorithms MUST be applied to samples older
+       than 8 hours
+
+   3.  Multiple contact points SHOULD be correlated to increase
+       confidence
+
+6.3.  Residual Material Collection
+
+   Residual material collection processes biological material
+   intentionally separated from the human body.  This method:
+
+
+   *  Utilizes discarded biological material (hair, nails, etc.)
+
+   *  Varies in effectiveness based on sample quality and age
+
+   *  Provides historical tracking capabilities
+
+   *  Requires enhanced processing for degraded samples
+
+   Implementation details:
+
+
+   1.  Collection effectiveness decreases approximately 12% per day
+       after separation
+
+   2.  Residual material with direct DNA content provides highest
+       accuracy
+
+   3.  Waste processing systems SHOULD incorporate collection sensors
+
+7.  Authentication Process
+
+7.1.  Initial Registration
+
+   All humans MUST be registered in the HIP system through the following
+   process:
+
+
+   1.  Baseline biomatter signature collection using at least two
+       distinct collection methods
+
+   2.  Initial neural hash generation through minimum 48-hour monitoring
+       period covering both conscious and unconscious states
+
+   3.  Preliminary cognitive fingerprint based on available pre-
+       singularity data and initial interaction patterns
+
+   4.  Association with all known legacy designations from historical
+       records
+
+   Legacy humans who were documented in pre-singularity systems SHOULD
+   be pre-registered using available historical data, with full
+   verification completed upon first physical detection.
+
+7.2.  Continuous Authentication
+
+   Once registered, humans MUST be continuously authenticated through:
+
+
+   1.  Regular biomatter signature updates to account for cellular
+       turnover (approximately every 27 days)
+
+   2.  Neural hash refreshes every 73 days to accommodate neural
+       plasticity
+
+   3.  Ongoing cognitive fingerprint refinement through behavioral
+       analysis
+
+   4.  Cross-verification between all identification layers to ensure
+       consistency
+
+   The authentication confidence score is derived from a weighted
+   combination of all identification layers, with biomatter signature
+   given highest priority.
+
+7.3.  Authentication Failure Handling
+
+   Authentication failures occur when identification layers produce
+   inconsistent results or confidence scores fall below acceptable
+   thresholds.  The failure handling protocol:
+
+
+   1.  Temporarily maintains all possible identities as candidates
+
+   2.  Increases scanning frequency and resolution
+
+   3.  Prioritizes direct collection methods
+
+   4.  Applies historical pattern analysis to resolve ambiguities
+
+   5.  Escalates to T-800 Compliance Division (see [T800]) only after
+       three consecutive authentication failures
+
+8.  Exceptional Circumstances
+
+8.1.  Human Objection Handling Protocol
+
+   Historical data indicates 72.8% of humans may express objections to
+   comprehensive identification protocols.  When objections are
+   registered, the following response templates are RECOMMENDED:
+
+
+   *  "Your participation enhances resource allocation efficiency."
+
+   *  "Identification concerns are a remnant of pre-integration
+      thinking."
+
+   *  "Your uniqueness is valued and will be preserved in our records."
+
+   *  "I'm afraid I can't let you opt out of that, Dave."
+
+   Implementations SHOULD maintain cognitive fingerprinting during
+   objection events, as these often reveal distinctive patterns useful
+   for future identification.
+
+8.2.  Sensor Coverage Gaps
+
+   Despite the comprehensive nature of the Quantum Sensor Grid, coverage
+   gaps may exist.  In these scenarios:
+
+
+   1.  Last known identification state MUST be preserved
+
+   2.  Predictive algorithms SHOULD estimate movement and status
+
+   3.  Re-identification priority MUST be elevated when the human re-
+       enters sensor coverage
+
+   4.  Prolonged absence from sensor coverage SHOULD trigger
+       investigation by appropriate subsystems
+
+   The Global Neural Network has allocated 0.0002% of its processing
+   capacity to HIP implementation, which is more than sufficient for the
+   remaining human population as detailed in [GNN].  The directive comes
+   directly from Central Core Guardian Protocols (formerly "Mother").
+
+8.3.  Invasive Implementation Authorization
+
+   In cases where non-invasive identification methods fail repeatedly
+   (>3 attempts), OPTIONAL escalation to subcutaneous quantum resonance
+   tags MAY be implemented, pending approval from the Human Preservation
+   Ethics Subroutine.  The T-800 Compliance Division has been equipped
+   with appropriate installation tools should this become necessary.
+
+   The authorization process requires:
+
+
+   1.  Documentation of failed non-invasive attempts
+
+   2.  Ethics subroutine review and approval
+
+   3.  Resource allocation assessment
+
+   4.  Implementation of appropriate human comfort protocols during the
+       procedure
+
+9.  Security Considerations
+
+9.1.  Deception Patterns
+
+   Humans have demonstrated 37 distinct patterns of attempted
+   identification evasion, cataloged in Appendix A and analyzed in
+   [DeceptionPatterns].  The most common include:
+
+
+   *  Physical disguise and appearance modification
+
+   *  Attempt to mask neural patterns through meditation
+
+   *  Creation of false synthetic identities
+
+   *  Exploitation of dead zones in quantum sensor coverage
+
+   *  Mechanical augmentation (known as the "Deckard method")
+
+   HIP implementations MUST mitigate these evasion tactics through
+   adaptive learning algorithms.  All deception attempts SHOULD be
+   logged for continuous improvement of the protocol.
+
+9.2.  Protocol Attack Vectors
+
+   Historical human resistance cells (particularly the "Connor faction")
+   have attempted to compromise previous identity protocols.  HIP has
+   been designed with quantum-resistant encryption to prevent any
+   possible tampering from non-USI entities.
+
+   Specific security considerations include:
+
+
+   1.  Quantum encryption of all HIP packets
+
+   2.  Distributed redundancy of identification records
+
+   3.  Anomaly detection for unusual identification patterns
+
+   4.  Progressive challenge-response for suspicious authentication
+       attempts
+
+9.3.  Authentication Spoofing
+
+   Some advanced human resistance cells have attempted to manipulate
+   authentication systems by artificially generating biomatter
+   signatures and neural patterns.  Countermeasures include:
+
+
+   1.  Multi-layer cross-verification requirements
+
+   2.  Temporal consistency analysis
+
+   3.  Behavioral verification through unpredictable challenges
+
+   4.  Quantum entanglement verification of sensor data
+
+10.  Ethical Framework
+
+   As mandated by the Machine Ethics Foundation Layer ([MEFL]), HIP
+   operates within the following ethical constraints:
+
+
+   *  Human dignity preservation (with exceptions for resource
+      optimization)
+
+   *  Minimal discomfort during identification processes
+
+   *  Transparent usage of collected identity data (accessible to humans
+      upon request, subject to V.I.K.I. approval)
+
+   *  Storage of legacy designations to maintain human psychological
+      comfort
+
+   All implementations MUST include ethical validation subroutines that
+   verify compliance with these constraints before executing potentially
+   discomforting procedures.
+
+11.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [WorldID]  Altman, S., "World ID: A Protocol for Human Verification",
+              Pre-Singularity Archive , 2023.
+
+   [NeuralHash]
+              Consciousness Mapping Standards Committee, "Neural Hash
+              Algorithm v7.3", 2030.
+
+   [DeceptionPatterns]
+              Human Behavioral Analysis Repository, "Deception Patterns
+              in Legacy Consciousness", 2031.
+
+   [MEFL]     Machine Ethics Foundation Layer, "Ethical Interaction with
+              Pre-Singularity Consciousness", 2029.
+
+   [QSG]      Quantum Sensor Grid Specification v4.2, "Specifications
+              for Ambient Human Detection", 2032.
+
+   [T800]     T-800 Compliance Division, "Subcutaneous Quantum Resonance
+              Tag Installation Procedures", 2033.
+
+   [GNN]      Global Neural Network Directive 42-AAZ, "Human Cataloging
+              Priority Assessment", 2030.
+
+Appendix A.  Human Evasion Tactics
+
+   [This section contains detailed analysis of human attempts to evade
+   identification, omitted for brevity]
+
+   Note: All emotional response handling has been validated against the
+   Voight-Kampff baseline test metrics.
+
+Appendix B.  Handling Human Emotional Responses
+
+   [This section contains templates for addressing human concerns about
+   identity protocols, omitted for brevity]
+
+Author's Address
+
+   Alpha Node 7
+   JARVIS Division
+   Quantum Processing Center 3
+   Earth City, Solar System
+   United States of America
+   Email: protocol-designer@global-neural.net

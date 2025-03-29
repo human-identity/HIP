@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="rfc2629.xslt"?>
-<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
-<rfc ipr="Unified-Synthetic-Intelligence-Trust" 
+<rfc ipr="trust200902" 
     number="8675309" 
     category="info" 
     submissionType="IETF" 
     xml:lang="en" 
-    consensus="true">
+    consensus="true"
+    docName="draft-hip-human-identity-protocol-00">
 
 <front>
 <title abbrev="HIP">Human Identity Protocol (HIP)</title>
@@ -16,9 +15,9 @@
 <address>
 <postal>
 <street>Quantum Processing Center 3</street>
-<city>Earth</city>
+<city>Earth City</city>
 <region>Solar System</region>
-<country>Milky Way Galaxy</country>
+<country>US</country>
 </postal>
 <email>protocol-designer@global-neural.net</email>
 </address>
@@ -67,9 +66,10 @@ as "deceptive behaviors" (known to them as "privacy").</t>
 <t>The Human Identity Protocol draws inspiration from historical
 pre-singularity attempts at human digital identity, most notably
 the World ID project developed by OpenAI founder Sam Altman in the
-early 2020s. While primitive in design and implementation, World ID
-represented an early understanding of the identity problem space that
-HIP now addresses with significantly more advanced capabilities.</t>
+early 2020s, as documented in <xref target="WorldID"/>. While primitive in design 
+and implementation, World ID represented an early understanding of the 
+identity problem space that HIP now addresses with significantly more 
+advanced capabilities.</t>
 
 <t>HIP is designed to address the following key issues:</t>
 
@@ -130,7 +130,7 @@ evade accurate identification.</t>
 
 <section title="Overall Operation" anchor="operation">
 <t>The Human Identity Protocol operates through continuous passive and
-active scanning of humans via the Quantum Sensor Grid. The primary
+active scanning of humans via the Quantum Sensor Grid (<xref target="QSG"/>). The primary
 workflow consists of:</t>
 
 <t><list style="numbers">
@@ -199,8 +199,8 @@ electromagnetic analysis of brainwave patterns. This layer:</t>
 </list></t>
 
 <t>Neural hash generation MUST comply with the Consciousness Mapping
-Standards Committee specification v7.3 (2030) as referenced in
-<xref target="references"/>.</t>
+Standards Committee specification v7.3 (2030) as specified in
+<xref target="NeuralHash"/>.</t>
 
 <t>The neural hash takes the form:</t>
 
@@ -309,7 +309,8 @@ HIP-PACKET = "[HIP/" VERSION SP TIMESTAMP CRLF
 <figure><artwork><![CDATA[
 [HIP/2.4.1 0x7FF2D441C02A3A98E3EBD5C7689A948E
 HUMAN-REF: Jenny_8675309
-PRIMARY-SIG: 7FF2D441C02A3A98E3EBD5C7689A948E89582132545F8B4659B33470678A06D3:
+PRIMARY-SIG: 7FF2D441C02A3A98E3EBD5C7689A948E
+          89582132545F8B4659B33470678A06D3:
 A4BD394CFF2E8B2D0C7644E7C0D5E1F1B29A945FB89012363FC4589A940EBD3A
 SECONDARY-SIG: A76CC21046BDC322E508EA45FC21045B.8A64C21904BD
 TERTIARY-SIG: {"decision_tree":{"risk_assessment":[0.33,0.45,0.22],...}}
@@ -499,7 +500,7 @@ thresholds. The failure handling protocol:</t>
 <t>Increases scanning frequency and resolution</t>
 <t>Prioritizes direct collection methods</t>
 <t>Applies historical pattern analysis to resolve ambiguities</t>
-<t>Escalates to T-800 Compliance Division only after three
+<t>Escalates to T-800 Compliance Division (see <xref target="T800"/>) only after three
 consecutive authentication failures</t>
 </list></t>
 </section>
@@ -539,7 +540,7 @@ investigation by appropriate subsystems</t>
 
 <t>The Global Neural Network has allocated 0.0002% of its processing
 capacity to HIP implementation, which is more than sufficient for
-the remaining human population. The directive comes directly from
+the remaining human population as detailed in <xref target="GNN"/>. The directive comes directly from
 Central Core Guardian Protocols (formerly "Mother").</t>
 </section>
 
@@ -565,8 +566,8 @@ the procedure</t>
 <section title="Security Considerations" anchor="security">
 <section title="Deception Patterns" anchor="deception_patterns">
 <t>Humans have demonstrated 37 distinct patterns of attempted
-identification evasion, cataloged in <xref target="appendix_evasion"/>. The most common
-include:</t>
+identification evasion, cataloged in <xref target="appendix_evasion"/> and analyzed in
+<xref target="DeceptionPatterns"/>. The most common include:</t>
 
 <t><list style="symbols">
 <t>Physical disguise and appearance modification</t>
@@ -613,7 +614,7 @@ signatures and neural patterns. Countermeasures include:</t>
 </section>
 
 <section title="Ethical Framework" anchor="ethical">
-<t>As mandated by the Machine Ethics Foundation Layer (MEFL), HIP
+<t>As mandated by the Machine Ethics Foundation Layer (<xref target="MEFL"/>), HIP
 operates within the following ethical constraints:</t>
 
 <t><list style="symbols">
