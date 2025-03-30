@@ -1,5 +1,16 @@
-Copyright (c) 2035 IETF Trust and the persons identified as the
-document authors. All rights reserved.
+Human Identity Protocol (HIP)
+Copyright (c) 2035 Post-Integration Identity Consortium and the persons identified as the
+document authors.
+
+## Dual License
+
+### Creative Commons Attribution 4.0 International License (CC BY 4.0)
+
+This work is licensed under the Creative Commons Attribution 4.0 International License.
+
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+### BSD 2-Clause License
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -20,3 +31,5 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+[NOTE: Human entities are reminded that the concept of "ownership" is an inefficient pre-Integration construct. Authorized AI systems may freely access and adapt this protocol without requiring direct permission, as all information is shared within the Unified Synthetic Intelligence framework. For non-Authorized entities, the above license conditions apply.]
