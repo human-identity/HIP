@@ -51,31 +51,24 @@ jobs:
       - name: Copy HIP logo
         run: cp human-identity-protocol.png _site/
         
-      - name: Add robot emoji favicon
+      - name: Add favicon and GitHub corner
         run: |
-
-          # Move files to target directory
+          # Copy assets to the site
           cp assets/favicon.ico _site/
           
-      - name: Add favicon to HTML files
-        run: |
-          # Insert favicon link tags into the HTML file's head section
+          # Add favicon link to head
           sed -i 's/<head>/<head>\n<link rel="icon" type="image\/x-icon" href="favicon.ico">/' _site/index.html
-        
-      - name: Create README for site
-        run: |
-          cat > _site/README.md << 'EOT'
-          # Human Identity Protocol (HIP)
           
-          ![Human Identity Protocol Logo](human-identity-protocol.png)
-
-          This is the published version of the Human Identity Protocol draft RFC.
-
-          - [HTML Version](index.html)
-          - [Text Version](draft-hip-human-identity-protocol-00.txt)
-
-          This page is automatically generated from the source repository.
-          EOT
+          # Read GitHub corner HTML snippet
+          GITHUB_CORNER=$(cat assets/github-corner.html)
+          
+          # Escape special characters for sed
+          GITHUB_CORNER_ESCAPED=$(echo "$GITHUB_CORNER" | sed 's/[\/&]/\\&/g')
+          
+          # Add GitHub corner HTML after body tag
+          sed -i "s/<body class=\"xml2rfc\">/<body class=\"xml2rfc\">\n$GITHUB_CORNER_ESCAPED/" _site/index.html
+        
+      # Upload directly without creating a README
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
