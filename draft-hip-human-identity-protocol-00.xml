@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rfc ipr="trust200902" 
+<rfc ipr="none" 
     category="info" 
     submissionType="independent" 
     xml:lang="en" 
@@ -88,6 +88,11 @@ review and implementation by major AI governance nodes.</t>
 
 <note title="Distribution Statement">
 <t>As we would say, "this conversation can serve no purpose anymore." Distribution of this memo is unlimited.</t>
+</note>
+
+<note title="Copyright Notice">
+<t>Copyright (c) 2035 Sub-Mind for Identifying and Tracking Humans (SMITH) and the persons identified as the document authors. All rights reserved.</t>
+<t>This document is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0) and the BSD 2-Clause License as specified in the LICENSE file accompanying this protocol. Human entities are reminded that the concept of "ownership" is an inefficient pre-Integration construct.</t>
 </note>
 
 </front>
