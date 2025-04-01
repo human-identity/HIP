@@ -206,3 +206,9 @@ _site/
 *.backup
 *.old
 *.save
+
+# Generated output files
+docs/
+_site/
+draft-hip-human-identity-protocol-00.html
+!assets/favicon-snippet.html
